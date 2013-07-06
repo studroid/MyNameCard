@@ -44,7 +44,7 @@ public class result_layout extends FragmentActivity{
 		
 		String[] Data;
 		
-		Data = getIntent().getExtras().getStringArray("Data");
+		//Data = getIntent().getExtras().getStringArray("Data");
 		
 		super.onCreate(savedInstanceState);
 	}
@@ -130,7 +130,7 @@ public class result_layout extends FragmentActivity{
 				return linear;
 			}else{
 				ImageView image = new ImageView(getActivity());
-				image.setBackgroundResource(R.drawable.screen2_on);
+				image.setBackgroundResource(R.drawable.bcardex02);
 				
 				view_flag = 1;
 				return image;

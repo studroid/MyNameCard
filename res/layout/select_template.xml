@@ -8,6 +8,16 @@
         android:id="@+id/template"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:src="@drawable/ic_launcher" />
+        android:scaleType="fitXY"
+        android:src="@drawable/template"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/template2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/template_on"
+        android:visibility="gone" />
 
 </LinearLayout>

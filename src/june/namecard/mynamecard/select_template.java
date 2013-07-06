@@ -18,14 +18,40 @@ public class select_template extends Activity{
 		setContentView(R.layout.select_template);
 		
 		setResult(1);
+		
+		
+		
 		ImageView select_btn = (ImageView)findViewById(R.id.template);
+		ImageView select_btn2 = (ImageView)findViewById(R.id.template2);
+		
+		
 		select_btn.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				findViewById(R.id.template).setVisibility(View.GONE);
+				findViewById(R.id.template2).setVisibility(View.VISIBLE);
+			}
+		});
+		
+		
+		select_btn2.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
 				Intent next_intent = new Intent(getApplication(),LayoutSelect.class);
-				startActivity(next_intent);
+				startActivityForResult(next_intent, 1);
 			}
 		});
 		super.onCreate(savedInstanceState);
 	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+
+		findViewById(R.id.template).setVisibility(View.VISIBLE);
+		findViewById(R.id.template2).setVisibility(View.GONE);
+		super.onActivityResult(requestCode, resultCode, data);
+	}
+	
+	
 }

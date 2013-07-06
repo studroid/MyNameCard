@@ -25,16 +25,16 @@ public class Data_Input extends Activity{
 				String phone;
 				String address;
 				String[] Data = new String[4];
-				
+				Intent next_intent = new Intent(getApplication(),result_layout.class);
+				/*
 				
 				Data[0] = ((EditText)findViewById(R.id.editText1)).getText().toString();
 				Data[1] = ((EditText)findViewById(R.id.editText2)).getText().toString();
 				Data[2] = ((EditText)findViewById(R.id.editText3)).getText().toString();
 				Data[3] = ((EditText)findViewById(R.id.editText4)).getText().toString();
-				
-				Intent next_intent = new Intent(getApplication(),result_layout.class);
-				
 				next_intent.putExtra("Data", Data);
+				*/
+				
 				
 				startActivity(next_intent);
 			}

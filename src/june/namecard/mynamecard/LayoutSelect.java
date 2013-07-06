@@ -55,6 +55,7 @@ public class LayoutSelect extends FragmentActivity {
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 
+		setResult(1);
 	}
 
 	@Override
@@ -137,7 +138,6 @@ public class LayoutSelect extends FragmentActivity {
 			Button layoutbtn = new Button(getActivity());
 			
 			LayoutParams param = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-			param.setMargins(50, 50, 50, 50);
 			layoutbtn.setBackgroundResource(getResources().getIdentifier("bcardexpoint0" + (position+1), "drawable",getActivity().getPackageName()));
 			
 			layoutbtn.setOnClickListener(new OnClickListener() {
